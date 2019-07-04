@@ -6,8 +6,8 @@ class ProfileGithub extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clientId: 'fccdcc1124ef9f936e24',
-      clientSecret: '4d186dcc0e416d4362b180f925db741a5f91bd17',
+      clientId: '26c196bacea7db10cf48',
+      clientSecret: '0885cb690e07d2a93a6afb0891fb552fd9f7aa53',
       count: 5,
       sort: 'created: asc',
       repos: []
@@ -24,7 +24,7 @@ class ProfileGithub extends Component {
       .then(res => res.json())
       .then(data => {
         if (this.refs.myRef) {
-          this.setState({ r5pos: data });
+          this.setState({ repos: data });
         }
       })
       .catch(err => console.log(err));
